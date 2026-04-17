@@ -108,14 +108,10 @@ hr {
   background-color: var(--gray);
 }
 
-// ── Code: slightly tighter, less boxy ────────────────────────────────────────
+// ── Inline code: slightly tighter ────────────────────────────────────────────
 code {
   font-size: 0.82em;
   border-radius: 3px;
-}
-
-pre {
-  border-radius: 6px;
 }
 
 // ── Progress bar: thinner ────────────────────────────────────────────────────
