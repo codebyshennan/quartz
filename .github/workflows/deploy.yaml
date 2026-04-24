@@ -32,6 +32,8 @@ jobs:
 
       - name: Build Quartz
         run: npx quartz build
+        env:
+          QUARTZ_PASSWORD_HASH: ${{ secrets.QUARTZ_PASSWORD_HASH }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
