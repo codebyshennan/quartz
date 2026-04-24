@@ -1,0 +1,43 @@
+// ── Code block wrapper: figure handles border + radius ────────────────────────
+figure[data-rehype-pretty-code-figure] {
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 1.25rem 0;
+
+  & > pre {
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+  }
+}
+
+// ── Language header bar ────────────────────────────────────────────────────────
+.code-header {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0.75rem;
+  background-color: var(--lightgray);
+  border-bottom: 1px solid var(--lightgray);
+}
+
+.code-language {
+  font-family: var(--codeFont);
+  font-size: 0.64rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gray);
+  font-weight: 600;
+}
+
+// ── Warm code block backgrounds ────────────────────────────────────────────────
+// Override Shiki's stark white/dark backgrounds to match the warm editorial palette
+code[data-theme*=" "] {
+  background-color: #f5f0e8;
+}
+
+[saved-theme="dark"] code[data-theme*=" "] {
+  background-color: #221d1a;
+}
