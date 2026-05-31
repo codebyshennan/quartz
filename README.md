@@ -7,22 +7,22 @@ Content is synced from the Obsidian vault at `../reference/vault`.
 ## Commands
 
 ```bash
-npm run generate          # sync vault → content/, generate goals index + todos
-npx quartz build          # build site
-npm run build:full        # generate + build in one step
-npx quartz build --serve  # local dev server
+pnpm run generate          # sync vault → content/, generate goals index + todos
+pnpm exec quartz build          # build site
+pnpm run build:full        # generate + build in one step
+pnpm exec quartz build --serve  # local dev server
 ```
 
 ## Content
 
 Content lives in `content/` and is mostly generated — don't edit generated files directly, edit the vault source.
 
-| Path | Source |
-|---|---|
-| `content/goals/` | Synced from `vault/goals/2026/` by `generate-content.mjs` |
-| `content/todos.md` | Auto-generated from open tasks across active goals |
-| `content/references/` | Manual |
-| `content/index.md` | Manual |
+| Path                  | Source                                                    |
+| --------------------- | --------------------------------------------------------- |
+| `content/goals/`      | Synced from `vault/goals/2026/` by `generate-content.mjs` |
+| `content/todos.md`    | Auto-generated from open tasks across active goals        |
+| `content/references/` | Manual                                                    |
+| `content/index.md`    | Manual                                                    |
 
 ## Auth
 
@@ -42,7 +42,7 @@ QUARTZ_PASSWORD_HASH=<hash>
 Then build with auth active:
 
 ```bash
-source .env.local && npx quartz build
+source .env.local && pnpm exec quartz build
 ```
 
 The same variable is set as a GitHub Actions secret (`QUARTZ_PASSWORD_HASH`) for CI builds.
@@ -50,8 +50,9 @@ The same variable is set as a GitHub Actions secret (`QUARTZ_PASSWORD_HASH`) for
 ## Vault Sync
 
 `scripts/generate-content.mjs` reads `vault/goals/2026/` and:
+
 - Copies each goal file to `content/goals/2026/`, stripping Dataview blocks
 - Generates `content/goals/2026/index.md` — a static dashboard with progress bars by area and priority
 - Generates `content/todos.md` — all incomplete tasks aggregated across active goals
 
-Override the vault path with `VAULT_PATH=/path/to/vault npm run generate`.
+Override the vault path with `VAULT_PATH=/path/to/vault pnpm run generate`.

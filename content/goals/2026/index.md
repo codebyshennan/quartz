@@ -8,7 +8,7 @@ _Updated: 2026-04-24_
 | Area | Goals | Tasks | Progress |
 |------|-------|-------|----------|
 | Finances | 11 | 0/56 | <div style="height:5px;border-radius:3px;background:var(--lightgray);margin-top:3px"><div style="height:100%;width:0%;border-radius:3px;background:#c678dd"></div></div> |
-| Fitness | 8 | 1/77 | <div style="height:5px;border-radius:3px;background:var(--lightgray);margin-top:3px"><div style="height:100%;width:1%;border-radius:3px;background:#e06c75"></div></div> |
+| Fitness | 9 | 3/92 | <div style="height:5px;border-radius:3px;background:var(--lightgray);margin-top:3px"><div style="height:100%;width:3%;border-radius:3px;background:#e06c75"></div></div> |
 | Health | 1 | 0/10 | <div style="height:5px;border-radius:3px;background:var(--lightgray);margin-top:3px"><div style="height:100%;width:0%;border-radius:3px;background:#56b6c2"></div></div> |
 | Language | 3 | 0/26 | <div style="height:5px;border-radius:3px;background:var(--lightgray);margin-top:3px"><div style="height:100%;width:0%;border-radius:3px;background:#61afef"></div></div> |
 | Lifestyle | 8 | 0/57 | <div style="height:5px;border-radius:3px;background:var(--lightgray);margin-top:3px"><div style="height:100%;width:0%;border-radius:3px;background:#98c379"></div></div> |
@@ -36,7 +36,10 @@ _Updated: 2026-04-24_
 **[[fitness/crossfit-weightlifting|Crossfit weightlifting]]** <span style="font-size:12px;color:var(--gray)">Fitness · Dec 2026 · 0/15</span>
 <div style="height:5px;border-radius:3px;background:var(--lightgray);margin-top:3px"><div style="height:100%;width:0%;border-radius:3px;background:#e06c75"></div></div>
 
-**[[fitness/body-composition|Body composition]]** <span style="font-size:12px;color:var(--gray)">Fitness · Jun 2026 · 0/12</span>
+**[[fitness/body-composition|Body composition]]** <span style="font-size:12px;color:var(--gray)">Fitness · Jun 2026 · 2/14</span>
+<div style="height:5px;border-radius:3px;background:var(--lightgray);margin-top:3px"><div style="height:100%;width:14%;border-radius:3px;background:#e06c75"></div></div>
+
+**[[fitness/cut-phase-apr-jun|Cut phase apr jun]]** <span style="font-size:12px;color:var(--gray)">Fitness · Jun 2026 · 0/13</span>
 <div style="height:5px;border-radius:3px;background:var(--lightgray);margin-top:3px"><div style="height:100%;width:0%;border-radius:3px;background:#e06c75"></div></div>
 
 **[[fitness/ippt-100-points|Ippt 100 points]]** <span style="font-size:12px;color:var(--gray)">Fitness · Jun 2026 · 0/10</span>

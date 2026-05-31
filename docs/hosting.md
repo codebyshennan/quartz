@@ -22,7 +22,7 @@ However, if you'd like to publish your site to the world, you need a way to host
 | ---------------------- | ------------------ |
 | Production branch      | `v4`               |
 | Framework preset       | `None`             |
-| Build command          | `npx quartz build` |
+| Build command          | `pnpm exec quartz build` |
 | Build output directory | `public`           |
 
 Press "Save and deploy" and Cloudflare should have a deployed version of your site in about a minute. Then, every time you sync your Quartz changes to GitHub, your site should be updated.
@@ -30,7 +30,7 @@ Press "Save and deploy" and Cloudflare should have a deployed version of your si
 To add a custom domain, check out [Cloudflare's documentation](https://developers.cloudflare.com/pages/platform/custom-domains/).
 
 > [!warning]
-> Cloudflare Pages performs a shallow clone by default, so if you rely on `git` for timestamps, it is recommended that you add `git fetch --unshallow &&` to the beginning of the build command (e.g., `git fetch --unshallow && npx quartz build`).
+> Cloudflare Pages performs a shallow clone by default, so if you rely on `git` for timestamps, it is recommended that you add `git fetch --unshallow &&` to the beginning of the build command (e.g., `git fetch --unshallow && pnpm exec quartz build`).
 
 ## GitHub Pages
 
@@ -64,9 +64,9 @@ jobs:
         with:
           node-version: 22
       - name: Install Dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
       - name: Build Quartz
-        run: npx quartz build
+        run: pnpm exec quartz build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -87,7 +87,7 @@ jobs:
 Then:
 
 1. Head to "Settings" tab of your forked repository and in the sidebar, click "Pages". Under "Source", select "GitHub Actions".
-2. Commit these changes by doing `npx quartz sync`. This should deploy your site to `<github-username>.github.io/<repository-name>`.
+2. Commit these changes by doing `pnpm exec quartz sync`. This should deploy your site to `<github-username>.github.io/<repository-name>`.
 
 > [!hint]
 > If you get an error about not being allowed to deploy to `github-pages` due to environment protection rules, make sure you remove any existing GitHub pages environments.
@@ -119,7 +119,7 @@ See the [GitHub documentation](https://docs.github.com/en/pages/configuring-a-cu
 > [!question] Why aren't my changes showing up?
 > There could be many different reasons why your changes aren't showing up but the most likely reason is that you forgot to push your changes to GitHub.
 >
-> Make sure you save your changes to Git and sync it to GitHub by doing `npx quartz sync`. This will also make sure to pull any updates you may have made from other devices so you have them locally.
+> Make sure you save your changes to Git and sync it to GitHub by doing `pnpm exec quartz sync`. This will also make sure to pull any updates you may have made from other devices so you have them locally.
 
 ## Vercel
 
@@ -144,7 +144,7 @@ Before deploying to Vercel, a `vercel.json` file is required at the root of the 
 | ----------------------------------------- | ------------------ |
 | Framework Preset                          | `Other`            |
 | Root Directory                            | `./`               |
-| Build and Output Settings > Build Command | `npx quartz build` |
+| Build and Output Settings > Build Command | `pnpm exec quartz build` |
 
 5. Press Deploy. Once it's live, you'll have 2 `*.vercel.app` URLs to view the page.
 
@@ -175,7 +175,7 @@ Using `docs.example.com` is an example of a subdomain. They're a simple way of c
 
 1. Log in to the [Netlify dashboard](https://app.netlify.com/) and click "Add new site".
 2. Select your Git provider and repository containing your Quartz project.
-3. Under "Build command", enter `npx quartz build`.
+3. Under "Build command", enter `pnpm exec quartz build`.
 4. Under "Publish directory", enter `public`.
 5. Press Deploy. Once it's live, you'll have a `*.netlify.app` URL to view the page.
 6. To add a custom domain, check "Domain management" in the left sidebar, just like with Vercel.
@@ -201,9 +201,9 @@ build:
     - if: '$CI_COMMIT_REF_NAME == "v4"'
   before_script:
     - hash -r
-    - npm ci --cache .npm --prefer-offline
+    - pnpm install --frozen-lockfile --cache .npm --prefer-offline
   script:
-    - npx quartz build
+    - pnpm exec quartz build
   artifacts:
     paths:
       - public

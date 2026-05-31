@@ -301,4 +301,4 @@ generateGoalsRoot()
 generateGoalsIndex(goals)
 generateTodos(goals)
 
-console.log("\nDone. Run `npm run build` to build the site.\n")
+console.log("\nDone. Run `pnpm run build` to build the site.\n")

@@ -6,8 +6,8 @@ Welcome to my personal notes — a mix of goals, active projects, and things I'v
 
 ## Now
 
-- [[goals/2026/index|Goals 2026]] — active goals across fitness, work, language, and more
 - [[todos|Open Tasks]] — aggregated to-do list across all goals
+- [[goals/2026/index|Goals 2026]] — active goals across fitness, work, language, and more
 
 ## References
 

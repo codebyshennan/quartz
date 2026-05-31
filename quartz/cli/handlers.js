@@ -43,7 +43,7 @@ function resolveContentPath(contentPath) {
 }
 
 /**
- * Handles `npx quartz create`
+ * Handles `pnpm exec quartz create`
  * @param {*} argv arguments for `create`
  */
 export async function handleCreate(argv) {
@@ -223,13 +223,13 @@ See the [documentation](https://quartz.jzhao.xyz) for how to get started.
 
   outro(`You're all set! Not sure what to do next? Try:
   • Customizing Quartz a bit more by editing \`quartz.config.ts\`
-  • Running \`npx quartz build --serve\` to preview your Quartz locally
+  • Running \`pnpm exec quartz build --serve\` to preview your Quartz locally
   • Hosting your Quartz online (see: https://quartz.jzhao.xyz/hosting)
 `)
 }
 
 /**
- * Handles `npx quartz build`
+ * Handles `pnpm exec quartz build`
  * @param {*} argv arguments for `build`
  */
 export async function handleBuild(argv) {
@@ -487,7 +487,7 @@ export async function handleBuild(argv) {
 }
 
 /**
- * Handles `npx quartz update`
+ * Handles `pnpm exec quartz update`
  * @param {*} argv arguments for `update`
  */
 export async function handleUpdate(argv) {
@@ -518,8 +518,8 @@ export async function handleUpdate(argv) {
   as it will be unable to find `npm`. This is often the case on systems
   where `npm` is installed via a package manager.
 
-  This means `npx quartz update` will not actually update dependencies
-  on Windows, without a manual `npm i` from the caller.
+  This means `pnpm exec quartz update` will not actually update dependencies
+  on Windows, without a manual `pnpm install` from the caller.
 
   However, by spawning a shell, we are able to call `npm.cmd`.
   See: https://nodejs.org/api/child_process.html#spawning-bat-and-cmd-files-on-windows
@@ -539,7 +539,7 @@ export async function handleUpdate(argv) {
 }
 
 /**
- * Handles `npx quartz restore`
+ * Handles `pnpm exec quartz restore`
  * @param {*} argv arguments for `restore`
  */
 export async function handleRestore(argv) {
@@ -548,7 +548,7 @@ export async function handleRestore(argv) {
 }
 
 /**
- * Handles `npx quartz sync`
+ * Handles `pnpm exec quartz sync`
  * @param {*} argv arguments for `sync`
  */
 export async function handleSync(argv) {

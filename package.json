@@ -13,11 +13,11 @@
   },
   "scripts": {
     "generate": "node scripts/generate-content.mjs",
-    "build:full": "node scripts/generate-content.mjs && npx quartz build",
+    "build:full": "node scripts/generate-content.mjs && pnpm exec quartz build",
     "quartz": "./quartz/bootstrap-cli.mjs",
-    "docs": "npx quartz build --serve -d docs",
-    "check": "tsc --noEmit && npx prettier . --check",
-    "format": "npx prettier . --write",
+    "docs": "pnpm exec quartz build --serve -d docs",
+    "check": "tsc --noEmit && pnpm exec prettier . --check",
+    "format": "pnpm exec prettier . --write",
     "test": "tsx --test",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1"
   },

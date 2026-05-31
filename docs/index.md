@@ -13,8 +13,8 @@ Then, in your terminal of choice, enter the following commands line by line:
 ```shell
 git clone https://github.com/jackyzha0/quartz.git
 cd quartz
-npm i
-npx quartz create
+pnpm install
+pnpm exec quartz create
 ```
 
 This will guide you through initializing your Quartz with content. Once you've done so, see how to:

@@ -7,7 +7,7 @@ area: "fitness"
 target-date: "2026-11-22T00:00:00.000Z"
 tags: [goal, fitness, hyrox]
 created: "2026-03-19T00:00"
-modified: "2026-04-23T00:00"
+modified: "2026-04-24T00:00"
 ---
 
 ## Goal
@@ -36,8 +36,10 @@ Hyrox Men's Pro Division — complete all 2025/26 Asia season races with progres
 
 ## Log
 2026-03-22: BKK — 1:45:30. Weakest stations: wall balls (9:00), sled pull (6:39), burpee broad jump (7:04). Run split 45:40 (~5:42/km pace across 8km). Focus areas before Jakarta: run volume + wall ball pacing.
+2026-04-24: Current cut phase prioritises visceral fat reduction plus 2 dedicated runs/week while preserving strength. No crash cut before Chengdu/Shenzhen.
 
 ## Related
 - [[body-composition]]
 - [[recovery-protocol]]
 - [[crossfit-weightlifting]]
+- [[cut-phase-apr-jun]]

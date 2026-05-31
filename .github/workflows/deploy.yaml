@@ -28,10 +28,10 @@ jobs:
           node-version: 22
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Build Quartz
-        run: npx quartz build
+        run: pnpm exec quartz build
         env:
           QUARTZ_PASSWORD_HASH: ${{ secrets.QUARTZ_PASSWORD_HASH }}
 
