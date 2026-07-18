@@ -27,11 +27,15 @@ jobs:
         with:
           node-version: 22
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.32.1
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Build Quartz
-        run: pnpm exec quartz build
+        run: pnpm quartz build
         env:
           QUARTZ_PASSWORD_HASH: ${{ secrets.QUARTZ_PASSWORD_HASH }}
 
