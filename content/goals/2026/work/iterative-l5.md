@@ -17,9 +17,11 @@ modified: "2026-07-30T00:00"
 > The key results below were never formally closed out; kept for the record.
 
 ## Goal
+
 ~~Achieve L5 promotion at Iterative Capital by Sep 2026.~~ Reached staff level externally instead.
 
 ## Key results
+
 - [ ] Define L5 criteria with manager
 - [ ] Complete internal tooling suite (Meridian, Atlas, Compass etc.)
 - [ ] Demonstrate ownership of data stack (Airtable → Airbyte → Postgres → BI/MCP)
@@ -27,11 +29,14 @@ modified: "2026-07-30T00:00"
 - [ ] Establish technical DD contribution to deal flow
 
 ## Context
-Currently L4, sole engineer at SG-HQ early-stage VC. Target L5 by Sep 2026.
+
+Was L4, sole engineer at SG-HQ early-stage VC. Left at L4 in Apr 2026 (restructuring, not
+performance). Staff/L5-equivalent scope now held as Lead Engineer at ShiftControl.
 
 ## Log
 
 ## Related
+
 - [[consulting-client]]
 - [[validation-sprints]]
 - [[staff-plus-infra-roadmap]]
